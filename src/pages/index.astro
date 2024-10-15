@@ -1,16 +1,114 @@
 ---
-
+import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <!-- Font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Astro</title>
+  </head>
+  <body>
+    <div class="min-h-svh">
+      <main class="mx-auto max-w-2xl px-4 py-32">
+        <section class="mb-16">
+          <h1 class="mb-4 text-zinc-50">Francisco Guerrero</h1>
+          <p class="text-zinc-100">
+            Hello! I'm Francisco, industrial engineer and web developer based in
+            Buenos Aires, Argentina, mainly specializing in React stack and
+            Astro Framework.
+          </p>
+          <p class="mt-4 text-zinc-100">
+            Passionate about coding, building and creating beautiful user
+            experiences. I'm a well-organized person with great interpersonal
+            skills, high attention to detail and a great enthusiasm for problem
+            solving.
+          </p>
+        </section>
+
+        <section class="mb-16">
+          <h2 class="mb-4 text-zinc-100">Stack</h2>
+          <p class="mb-4 text-zinc-400">
+            My current go-to stack where I feel the most productive.
+          </p>
+          <ul class="space-y-4">
+            {
+              [
+                "React - NextJs - Astro",
+                "Tailwind - Radix - Shadcn/ui",
+                "TanStack Query & Router",
+                "Postgres - Express",
+              ].map((tech) => (
+                <li>
+                  <h3 class="text-zinc-100">{tech}</h3>
+                  <p class="text-zinc-400">
+                    Hello! I'm Francisco, industrial engineer and web developer
+                    based in Buenos Aires, Argentina, mainly specializing in
+                    React stack and Astro Framework.
+                  </p>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+        <section class="mb-16">
+          <h2 class="mb-4 text-zinc-100">Projects</h2>
+          <p class="mb-4 text-zinc-400">
+            Freelance or side projects I've built recently.
+          </p>
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {
+              [
+                {
+                  name: "Bookmarks",
+                  description:
+                    "A personal space for saving, organizing, and retrieving web links.",
+                },
+                {
+                  name: "Stefanos",
+                  description:
+                    "Website & Product catalogue for Stefanos Leather",
+                },
+                {
+                  name: "Quanticom",
+                  description: "Website for Digital Marketing Agency",
+                },
+                {
+                  name: "Brasa",
+                  description: "Landing page for Argentinian agency",
+                },
+              ].map((project) => (
+                <div class="rounded bg-zinc-800 p-4">
+                  <h3 class="text-zinc-100">{project.name}</h3>
+                  <p class="mb-4 text-zinc-400">{project.description}</p>
+                </div>
+              ))
+            }
+          </div>
+        </section>
+
+        <section>
+          <h2 class="mb-4 text-zinc-100">Let's get in touch</h2>
+          <div class="flex space-x-4">
+            {
+              ["Twitter", "Email", "Github", "LinkedIn"].map((platform) => (
+                <a href="#" class="text-zinc-400 hover:text-zinc-100">
+                  {platform} →
+                </a>
+              ))
+            }
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>

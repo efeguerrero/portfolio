@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border box-border min-w-0;
+  }
+  body {
+    @apply font-inter bg-zinc-900 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-balance;
+  }
+
+  h1 {
+    @apply text-xl font-semibold leading-[150%];
+  }
+
+  h2 {
+    @apply text-lg font-semibold leading-[150%];
+  }
+
+  h3 {
+    @apply text-sm font-semibold leading-[140%];
+  }
+
+  p {
+    @apply text-pretty text-sm leading-[140%];
+  }
+}
