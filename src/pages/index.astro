@@ -44,6 +44,28 @@ const links = [
     url: "https://www.linkedin.com/in/juan-francisco-guerrero-16143849/",
   },
 ];
+
+const stack = [
+  {
+    name: "React - Next.js - Astro",
+    description: "",
+  },
+  {
+    name: "Tailwind - Radix - Shadcn/ui",
+    description:
+      "Tailwind has many benefits, but style colocation and not having to name things are already a big win for me. In terms of components, I try to avoid reinventing the wheel and use battle-tested, extensible component libraries like Radix-UI and Shadcn/ui.",
+  },
+  {
+    name: "TanStack Query",
+    description:
+      "Unless I'm using a framework that solves data fetching and mutations, TanStack Query is my choice for handling asynchronous state. Caching, prefetching, refetching... A big win in terms of DX and UX.",
+  },
+  {
+    name: "Postgres - Express",
+    description:
+      "PostgreSQL is my go-to database, along with the occasional custom Node server using Express.",
+  },
+];
 ---
 
 <html lang="en">
@@ -75,14 +97,14 @@ const links = [
             Francisco Guerrero
           </h1>
           <p class="text-zinc-400">
-            I'm a developer based in Buenos Aires, Argentina.
-            Currently working as a product engineer at <span
+            I'm a developer based in Buenos Aires, Argentina. Currently working
+            as a product engineer at <span
               ><a
                 class="underlnie text-zinc-200 underline decoration-zinc-600 underline-offset-4 sm:hover:decoration-zinc-400"
                 target="_blank"
                 href="https://www.sidetool.co/">Sidetool</a
               ></span
-            >
+            >.
           </p>
           <p class="mt-6 text-zinc-400">
             Passionate about coding, building and music.
@@ -94,27 +116,25 @@ const links = [
           <p class="mb-10 text-zinc-400">
             My current go-to stack where I feel the most productive.
           </p>
-          <ul class="space-y-10">
+          <ul class="space-y-6">
             {
-              [
-                "React - NextJs - Astro",
-                "Tailwind - Radix - Shadcn/ui",
-                "TanStack Query & Router",
-                "Postgres - Express",
-              ].map((tech) => (
+              projects.map((stack) => (
                 <li class="space-y-1">
-                  <h3 class="font-medium text-zinc-100">{tech}</h3>
+                  <h3 class="flex items-center font-medium text-zinc-200 underline decoration-zinc-600 underline-offset-4">
+                    {stack.name}
+                    <span class="ml-1">
+                      <ArrowUpRight />
+                    </span>
+                  </h3>
                   <p class="text-sm leading-relaxed text-zinc-400">
-                    Hello! I'm Francisco, industrial engineer and web developer
-                    based in Buenos Aires, Argentina, mainly specializing in
-                    React stack and Astro Framework.
+                    {stack.description}
                   </p>
                 </li>
               ))
             }
           </ul>
         </section>
-        <section class="mb-16">
+        <!-- <section class="mb-16">
           <h2 class="mb-2 text-lg font-semibold text-zinc-100">Projects</h2>
           <p class="mb-10 text-zinc-400">
             Freelance or side projects I've built recently.
@@ -135,7 +155,7 @@ const links = [
               ))
             }
           </div>
-        </section>
+        </section> -->
 
         <section>
           <h2 class="mb-4 text-lg font-semibold text-zinc-100">
