@@ -9,6 +9,15 @@ export default {
       fontFamily: {
         inter: ["Inter", ...defaultTheme.fontFamily.sans],
       },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
+      animation: {
+        "text-fade-in": "fadeIn 0.7s ease-in both",
+      },
     },
   },
   plugins: [],

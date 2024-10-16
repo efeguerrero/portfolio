@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --base-animation-delay: 80ms;
+  }
+
   * {
     @apply box-border min-w-0;
   }

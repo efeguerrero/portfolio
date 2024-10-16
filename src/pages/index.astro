@@ -11,17 +11,17 @@ const projects = [
   },
   {
     name: "Stefanos",
-    description: "Website & Product catalogue for Stefanos Leather",
+    description: "Product catalogue for Stefanos Leather.",
     url: "https://www.stefanosleather.com/",
   },
   {
     name: "Quanticom",
-    description: "Website for Digital Marketing Agency",
+    description: "Website for digital marketing agency.",
     url: "https://quanticom.com.py/",
   },
   {
     name: "Brasa",
-    description: "Landing page for Argentinian agency",
+    description: "Landing page for Argentinian agency.",
     url: "https://brasa.agency/",
   },
 ];
@@ -44,28 +44,6 @@ const links = [
     url: "https://www.linkedin.com/in/juan-francisco-guerrero-16143849/",
   },
 ];
-
-const stack = [
-  {
-    name: "React - Next.js - Astro",
-    description: "",
-  },
-  {
-    name: "Tailwind - Radix - Shadcn/ui",
-    description:
-      "Tailwind has many benefits, but style colocation and not having to name things are already a big win for me. In terms of components, I try to avoid reinventing the wheel and use battle-tested, extensible component libraries like Radix-UI and Shadcn/ui.",
-  },
-  {
-    name: "TanStack Query",
-    description:
-      "Unless I'm using a framework that solves data fetching and mutations, TanStack Query is my choice for handling asynchronous state. Caching, prefetching, refetching... A big win in terms of DX and UX.",
-  },
-  {
-    name: "Postgres - Express",
-    description:
-      "PostgreSQL is my go-to database, along with the occasional custom Node server using Express.",
-  },
-];
 ---
 
 <html lang="en">
@@ -81,24 +59,24 @@ const stack = [
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
     <title>Francisco Guerrero</title>
   </head>
   <body>
     <div class="min-h-svh">
-      <main class="mx-auto max-w-2xl px-4 pb-24 pt-16 sm:pb-32 sm:pt-32">
+      <main class="mx-auto max-w-xl px-4 pb-24 pt-12 sm:pb-24 sm:pt-24">
         <section class="mb-16">
-          <h1 class="mb-10 text-xl font-semibold text-zinc-100">
+          <h1
+            style="animation-delay:calc(1 * var(--base-animation-delay))"
+            class="animate-text-fade-in mb-7 text-xl font-semibold text-zinc-100"
+          >
             Francisco Guerrero
           </h1>
-          <p class="text-zinc-400">
-            I'm a developer based in Buenos Aires, Argentina. Currently working
-            as a product engineer at <span
+          <p
+            style="animation-delay:calc(2 * var(--base-animation-delay))"
+            class="text-zinc-400 animate-text-fade-in"
+          >
+            I'm a fullstack developer based in Buenos Aires, Argentina.
+            Currently working as a product engineer at <span
               ><a
                 class="underlnie text-zinc-200 underline decoration-zinc-600 underline-offset-4 sm:hover:decoration-zinc-400"
                 target="_blank"
@@ -106,75 +84,68 @@ const stack = [
               ></span
             >.
           </p>
-          <p class="mt-6 text-zinc-400">
+          <p
+            style="animation-delay:calc(3 * var(--base-animation-delay))"
+            class="mt-6 text-zinc-400 animate-text-fade-in"
+          >
             Passionate about coding, building and music.
           </p>
         </section>
 
         <section class="mb-16">
-          <h2 class="mb-2 text-lg font-semibold text-zinc-100">Stack</h2>
-          <p class="mb-10 text-zinc-400">
-            My current go-to stack where I feel the most productive.
+          <h2
+            style="animation-delay:calc(4 * var(--base-animation-delay))"
+            class="mb-0 text-lg font-semibold text-zinc-100 animate-text-fade-in"
+          >
+            Projects
+          </h2>
+          <p
+            style="animation-delay:calc(5 * var(--base-animation-delay))"
+            class="mb-7 text-base text-zinc-400 animate-text-fade-in"
+          >
+            Freelance or side projects I've built recently.
           </p>
           <ul class="space-y-6">
             {
-              projects.map((stack) => (
-                <li class="space-y-1">
-                  <h3 class="flex items-center font-medium text-zinc-200 underline decoration-zinc-600 underline-offset-4">
-                    {stack.name}
-                    <span class="ml-1">
+              projects.map((project,index) => (
+                <li
+                  style=`animation-delay:calc(${index + 6} * var(--base-animation-delay))`
+                  class="space-y-1 animate-text-fade-in"
+                >
+                  <a
+                    target="_blank"
+                    href={project.url}
+                    class="group flex items-center font-medium text-zinc-200 underline decoration-zinc-600 underline-offset-4 sm:hover:decoration-zinc-400"
+                  >
+                    {project.name}
+                    <span class="ml-1 text-zinc-400 sm:group-hover:text-zinc-200">
                       <ArrowUpRight />
                     </span>
-                  </h3>
+                  </a>
                   <p class="text-sm leading-relaxed text-zinc-400">
-                    {stack.description}
+                    {project.description}
                   </p>
                 </li>
               ))
             }
           </ul>
         </section>
-        <!-- <section class="mb-16">
-          <h2 class="mb-2 text-lg font-semibold text-zinc-100">Projects</h2>
-          <p class="mb-10 text-zinc-400">
-            Freelance or side projects I've built recently.
-          </p>
-          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {
-              projects.map((project) => (
-                <a target="_blank" href={project.url} class="group contents">
-                  <div class="space-y-1 rounded-lg border-[1px] border-zinc-700 px-4 pb-4 pt-3 transition-colors">
-                    <h3 class="font-medium text-zinc-100 decoration-zinc-400 underline-offset-4 sm:group-hover:underline">
-                      {project.name}
-                    </h3>
-                    <p class="text-sm leading-normal text-zinc-400">
-                      {project.description}
-                    </p>
-                  </div>
-                </a>
-              ))
-            }
-          </div>
-        </section> -->
-
         <section>
-          <h2 class="mb-4 text-lg font-semibold text-zinc-100">
+          <h2 style="animation-delay:calc(10 * var(--base-animation-delay))" class="mb-4 text-lg font-semibold text-zinc-100 animate-text-fade-in">
             Let's get in touch
           </h2>
-          <div class="flex space-x-4">
+          <div class="flex flex-wrap gap-x-4 gap-y-2">
             {
               links.map((link) => (
                 <a
+                style="animation-delay:calc(11 * var(--base-animation-delay))"
                   target="_blank"
                   href={link.url}
-                  class="flex items-center text-zinc-400 sm:hover:text-zinc-100"
+                  class="flex items-center text-zinc-400 sm:hover:text-zinc-100 animate-text-fade-in"
                 >
                   <p class="underline decoration-zinc-600 underline-offset-4 sm:hover:decoration-zinc-400">
                     {link.name}
                   </p>
-                  <span class="ml-[2px]">
-                    <ArrowUpRight />
-                  </span>
                 </a>
               ))
             }
