@@ -75,15 +75,17 @@ const links = [
             Francisco Guerrero
           </h1>
           <p class="text-zinc-400">
-            Hello! I'm Francisco, industrial engineer and web developer based in
-            Buenos Aires, Argentina, mainly specializing in React stack and
-            Astro Framework.
+            I'm a developer based in Buenos Aires, Argentina.
+            Currently working as a product engineer at <span
+              ><a
+                class="underlnie text-zinc-200 underline decoration-zinc-600 underline-offset-4 sm:hover:decoration-zinc-400"
+                target="_blank"
+                href="https://www.sidetool.co/">Sidetool</a
+              ></span
+            >
           </p>
           <p class="mt-6 text-zinc-400">
-            Passionate about coding, building and creating beautiful user
-            experiences. I'm a well-organized person with great interpersonal
-            skills, high attention to detail and a great enthusiasm for problem
-            solving.
+            Passionate about coding, building and music.
           </p>
         </section>
 
@@ -122,7 +124,7 @@ const links = [
               projects.map((project) => (
                 <a target="_blank" href={project.url} class="group contents">
                   <div class="space-y-1 rounded-lg border-[1px] border-zinc-700 px-4 pb-4 pt-3 transition-colors">
-                    <h3 class="font-medium text-zinc-100 decoration-zinc-500 underline-offset-4 sm:group-hover:underline">
+                    <h3 class="font-medium text-zinc-100 decoration-zinc-400 underline-offset-4 sm:group-hover:underline">
                       {project.name}
                     </h3>
                     <p class="text-sm leading-normal text-zinc-400">
@@ -147,7 +149,7 @@ const links = [
                   href={link.url}
                   class="flex items-center text-zinc-400 sm:hover:text-zinc-100"
                 >
-                  <p class="underline decoration-zinc-700 underline-offset-4 sm:hover:decoration-zinc-400">
+                  <p class="underline decoration-zinc-600 underline-offset-4 sm:hover:decoration-zinc-400">
                     {link.name}
                   </p>
                   <span class="ml-[2px]">
