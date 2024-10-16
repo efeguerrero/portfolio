@@ -1,23 +1,47 @@
 ---
 import "../styles/global.css";
+import ArrowUpRight from "../components/icons/arrow-up-right.astro";
 
 const projects = [
   {
     name: "Bookmarks",
     description:
       "A personal space for saving, organizing, and retrieving web links.",
+    url: "https://bookmarks.franguerrero.dev",
   },
   {
     name: "Stefanos",
     description: "Website & Product catalogue for Stefanos Leather",
+    url: "https://www.stefanosleather.com/",
   },
   {
     name: "Quanticom",
     description: "Website for Digital Marketing Agency",
+    url: "https://quanticom.com.py/",
   },
   {
     name: "Brasa",
     description: "Landing page for Argentinian agency",
+    url: "https://brasa.agency/",
+  },
+];
+
+const links = [
+  {
+    name: "Twitter",
+    url: "https://x.com/frnguerrero",
+  },
+  {
+    name: "Email",
+    url: "mailto:francisco.guerrero.dev@gmail.com",
+  },
+  {
+    name: "Github",
+    url: "https://github.com/efeguerrero",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/juan-francisco-guerrero-16143849/",
   },
 ];
 ---
@@ -35,21 +59,27 @@ const projects = [
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Francisco Guerrero</title>
   </head>
   <body>
     <div class="min-h-svh">
-      <main class="mx-auto max-w-2xl px-4 py-16 sm:py-32">
+      <main class="mx-auto max-w-2xl px-4 pb-24 pt-16 sm:pb-32 sm:pt-32">
         <section class="mb-16">
-          <h1 class="mb-6 text-2xl font-semibold text-zinc-50">
+          <h1 class="mb-10 text-xl font-semibold text-zinc-100">
             Francisco Guerrero
           </h1>
-          <p class="text-zinc-200">
+          <p class="text-zinc-400">
             Hello! I'm Francisco, industrial engineer and web developer based in
             Buenos Aires, Argentina, mainly specializing in React stack and
             Astro Framework.
           </p>
-          <p class="mt-6 text-zinc-200">
+          <p class="mt-6 text-zinc-400">
             Passionate about coding, building and creating beautiful user
             experiences. I'm a well-organized person with great interpersonal
             skills, high attention to detail and a great enthusiasm for problem
@@ -58,11 +88,11 @@ const projects = [
         </section>
 
         <section class="mb-16">
-          <h2 class="mb-2 text-xl font-semibold text-zinc-100">Stack</h2>
-          <p class="mb-7 text-zinc-400">
+          <h2 class="mb-2 text-lg font-semibold text-zinc-100">Stack</h2>
+          <p class="mb-10 text-zinc-400">
             My current go-to stack where I feel the most productive.
           </p>
-          <ul class="space-y-7">
+          <ul class="space-y-10">
             {
               [
                 "React - NextJs - Astro",
@@ -71,8 +101,8 @@ const projects = [
                 "Postgres - Express",
               ].map((tech) => (
                 <li class="space-y-1">
-                  <h3 class="font-semibold text-zinc-200">{tech}</h3>
-                  <p class="text-sm leading-6 text-zinc-400">
+                  <h3 class="font-medium text-zinc-100">{tech}</h3>
+                  <p class="text-sm leading-relaxed text-zinc-400">
                     Hello! I'm Francisco, industrial engineer and web developer
                     based in Buenos Aires, Argentina, mainly specializing in
                     React stack and Astro Framework.
@@ -83,31 +113,46 @@ const projects = [
           </ul>
         </section>
         <section class="mb-16">
-          <h2 class="text-xl font-semibold text-zinc-100">Projects</h2>
-          <p class="mb-7 text-zinc-400">
+          <h2 class="mb-2 text-lg font-semibold text-zinc-100">Projects</h2>
+          <p class="mb-10 text-zinc-400">
             Freelance or side projects I've built recently.
           </p>
           <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
             {
               projects.map((project) => (
-                <div class="space-y-1 rounded-lg border-[1px] border-zinc-700 px-4 pb-4 pt-3">
-                  <h3 class="font-medium text-zinc-200">{project.name}</h3>
-                  <p class="text-sm text-zinc-400">{project.description}</p>
-                </div>
+                <a target="_blank" href={project.url} class="group contents">
+                  <div class="space-y-1 rounded-lg border-[1px] border-zinc-700 px-4 pb-4 pt-3 transition-colors">
+                    <h3 class="font-medium text-zinc-100 decoration-zinc-500 underline-offset-4 sm:group-hover:underline">
+                      {project.name}
+                    </h3>
+                    <p class="text-sm leading-normal text-zinc-400">
+                      {project.description}
+                    </p>
+                  </div>
+                </a>
               ))
             }
           </div>
         </section>
 
         <section>
-          <h2 class="mb-4 text-xl font-semibold text-zinc-100">
+          <h2 class="mb-4 text-lg font-semibold text-zinc-100">
             Let's get in touch
           </h2>
           <div class="flex space-x-4">
             {
-              ["Twitter", "Email", "Github", "LinkedIn"].map((platform) => (
-                <a href="#" class="text-zinc-400 hover:text-zinc-100">
-                  {platform} →
+              links.map((link) => (
+                <a
+                  target="_blank"
+                  href={link.url}
+                  class="flex items-center text-zinc-400 sm:hover:text-zinc-100"
+                >
+                  <p class="underline decoration-zinc-700 underline-offset-4 sm:hover:decoration-zinc-400">
+                    {link.name}
+                  </p>
+                  <span class="ml-[2px]">
+                    <ArrowUpRight />
+                  </span>
                 </a>
               ))
             }

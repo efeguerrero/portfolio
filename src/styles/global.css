@@ -7,7 +7,7 @@
     @apply box-border min-w-0;
   }
   body {
-    @apply font-inter bg-zinc-900 antialiased;
+    @apply bg-zinc-900 font-inter antialiased;
   }
 
   h1,
@@ -20,4 +20,8 @@
   p {
     @apply text-pretty;
   }
+}
+
+h6 {
+  color: hsl(0, 0%, 90%);
 }
