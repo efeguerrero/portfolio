@@ -49,11 +49,32 @@ const links = [
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="canonincal" href="https://franguerrero.dev">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Developer based in Buenos Aires, Argentina."
+    />
+    <meta property="og:site_name" content="Francisco Guerrero" />
+    <meta property="og:title" content="Francisco Guerrero" />
+    <meta
+      property="og:image"
+      content="https://franguerrero.dev/og/og.png"
+    />
+    <meta property="og:url" content="https://franguerrero.dev" />
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@frnguerrero" />
+    <meta name="twitter:creator" content="@frnguerrero">
+    <meta name="twitter:title" content="Francisco Guerrero" />
+    <meta name="twitter:description" content="Developer based in Buenos Aires, Argentina." />
+    <meta name="twitter:image" content="https://franguerrero.dev/og/og.png" />
     <!-- Font import -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

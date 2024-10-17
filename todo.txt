@@ -1,4 +1,4 @@
-- Add light/dark favicon
+- Add light/dark favicon - DONE
 - OG Images and data
 - Title & description
 - Umami analytics
