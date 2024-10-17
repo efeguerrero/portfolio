@@ -1,0 +1,5 @@
+- Add light/dark favicon
+- OG Images and data
+- Title & description
+- Umami analytics
+- deploy
