@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "geist-mono";
+  src:
+    url("/fonts/GeistMonoVF.woff2") format("woff2"),
+    url("/fonts/GeistMonoVF.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
 @layer base {
   :root {
     --base-animation-delay: 80ms;
@@ -11,7 +21,7 @@
     @apply box-border min-w-0;
   }
   body {
-    @apply bg-zinc-900 font-inter antialiased;
+    @apply font-geist-mono bg-zinc-900 antialiased;
   }
 
   h1,

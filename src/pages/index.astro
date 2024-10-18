@@ -92,20 +92,20 @@ const links = [
   </head>
   <body class="selection:bg-zinc-800">
     <div class="min-h-svh">
-      <main class="mx-auto max-w-xl px-4 pb-24 pt-12 sm:pb-24 sm:pt-24">
+      <main class="mx-auto max-w-2xl px-4 pb-24 pt-12 sm:pb-24 sm:pt-24">
         <section class="mb-16">
           <h1
             style="animation-delay:calc(1 * var(--base-animation-delay))"
-            class="animate-text-fade-in mb-7 text-xl font-semibold text-zinc-100"
+            class="animate-text-fade-in mb-8 text-lg font-semibold text-zinc-100"
           >
             Francisco Guerrero
           </h1>
           <p
             style="animation-delay:calc(2 * var(--base-animation-delay))"
-            class="text-zinc-400 animate-text-fade-in sm:text-balance"
+            class="text-zinc-400 animate-text-fade-in leading-relaxed"
           >
             I'm a full-stack developer based in Buenos Aires, Argentina.
-            Currently working as a product engineer at <span
+            Currently working as a lead product engineer at <span
               ><a
                 class="underlnie text-zinc-200 underline decoration-zinc-600 underline-offset-4 sm:hover:decoration-zinc-400"
                 target="_blank"
@@ -124,16 +124,10 @@ const links = [
         <section class="mb-16">
           <h2
             style="animation-delay:calc(4 * var(--base-animation-delay))"
-            class="mb-1 text-lg font-semibold text-zinc-100 animate-text-fade-in"
+            class="mb-8 text-lg font-semibold text-zinc-100 animate-text-fade-in"
           >
             Projects
           </h2>
-          <p
-            style="animation-delay:calc(5 * var(--base-animation-delay))"
-            class="mb-8 text-sm text-zinc-400 animate-text-fade-in"
-          >
-            Freelance or side projects I've built recently.
-          </p>
           <ul class="space-y-6">
             {
               projects.map((project,index) => (
@@ -160,10 +154,10 @@ const links = [
           </ul>
         </section>
         <section>
-          <h2 style="animation-delay:calc(10 * var(--base-animation-delay))" class="mb-4 text-lg font-semibold text-zinc-100 animate-text-fade-in">
+          <h2 style="animation-delay:calc(10 * var(--base-animation-delay))" class="mb-6 text-lg font-semibold text-zinc-100 animate-text-fade-in">
             Let's get in touch
           </h2>
-          <div class="flex flex-wrap gap-x-4 gap-y-2">
+          <div class="flex flex-wrap gap-x-8 gap-y-3">
             {
               links.map((link) => (
                 <a

@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         inter: ["Inter", ...defaultTheme.fontFamily.sans],
+        "geist-mono": ["geist-mono", ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
         fadeIn: {
