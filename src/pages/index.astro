@@ -136,6 +136,7 @@ const links = [
                   class="space-y-1 animate-text-fade-in"
                 >
                   <a
+                    data-umami-event={`${project.name} link clicked`}
                     target="_blank"
                     href={project.url}
                     class="w-fit group flex items-center font-medium text-zinc-200 underline decoration-zinc-600 underline-offset-4 sm:hover:decoration-zinc-400"
@@ -161,6 +162,7 @@ const links = [
             {
               links.map((link) => (
                 <a
+                data-umami-event={`${link.name} social clicked`}
                 style="animation-delay:calc(11 * var(--base-animation-delay))"
                   target="_blank"
                   href={link.url}
